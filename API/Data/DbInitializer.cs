@@ -27,7 +27,7 @@ namespace API.Data
 
                     Status = "Venter",
 
-                    Deadline = new DateTime(2019,05,09,9,15,0)
+                    Deadline = new DateTime(2021,05,09,9,15,0)
                 },
                 new Artifact
                 {
@@ -43,7 +43,7 @@ namespace API.Data
 
                     Status = "Færdig",
 
-                    Deadline = new DateTime(2019,05,09,9,15,0)
+                    Deadline = new DateTime(2019,05,09)
                 },
                 };
 
