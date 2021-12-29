@@ -1,7 +1,12 @@
 import { ThemeProvider } from "@emotion/react";
 import { Container, createTheme, CssBaseline, Typography } from "@mui/material";
 import { useState } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import AboutPage from "../../features/about/AboutPage";
 import Catalog from "../../features/catalog/Catalog";
+import GuidePage from "../../features/guides/GuidePage";
+import HomePage from "../../features/home/HomePage";
+import ToDoPage from "../../features/todo/ToDoPage";
 import Header from "./Header";
 
 
@@ -26,6 +31,7 @@ function App() {
 
 
   return (
+    <BrowserRouter>
     <div className="App">
       <ThemeProvider theme={theme} >
       <CssBaseline/>
@@ -38,7 +44,12 @@ function App() {
             See all guides below
           </Typography>
         </Container>
-        <Catalog/>
+
+        <Route exact path="/" component={HomePage}></Route>
+        <Route exact path="/catalog" component={Catalog}></Route>
+        <Route path="/about/"component={AboutPage}></Route>
+        <Route path="/todo/"component={ToDoPage}></Route>
+        <Route path="/guides/"component={GuidePage}></Route>
         
 
         <h4>
@@ -48,6 +59,7 @@ function App() {
       </Container>
       </ThemeProvider>
     </div>
+    </BrowserRouter>
   );
 }
 
