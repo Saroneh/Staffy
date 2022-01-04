@@ -1,5 +1,6 @@
 import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
 import { red } from "@mui/material/colors";
+import { Link } from "react-router-dom";
 import { Artifact } from "../../app/models/artifact";
 
 interface Props{
@@ -37,7 +38,7 @@ export default function ArtifactCard({artifacts}:Props) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Se mere</Button>
+                <Button component={Link} to={`/catalog/${artifacts.id}`} size="small">Se mere</Button>
                 <Button size="small">Tilføj favorit</Button>
             </CardActions>
             </Card>

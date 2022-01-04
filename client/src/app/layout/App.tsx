@@ -3,6 +3,7 @@ import { Container, createTheme, CssBaseline, Typography } from "@mui/material";
 import { useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import AboutPage from "../../features/about/AboutPage";
+import ArtifactDetails from "../../features/catalog/ArtifactDetails";
 import Catalog from "../../features/catalog/Catalog";
 import GuidePage from "../../features/guides/GuidePage";
 import HomePage from "../../features/home/HomePage";
@@ -47,6 +48,7 @@ function App() {
 
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/catalog" component={Catalog}></Route>
+        <Route exact path="/catalog/:id" component={ArtifactDetails}></Route>
         <Route path="/about/"component={AboutPage}></Route>
         <Route path="/todo/"component={ToDoPage}></Route>
         <Route path="/guides/"component={GuidePage}></Route>
